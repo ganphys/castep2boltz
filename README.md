@@ -2,15 +2,15 @@
 # CASTEP interface to the BOLTZTRAP program
 #
 # usage:
-# castep2boltz <seedname> <optional arguments>
+# castep2boltz [seedname] [optional arguments]
 # available argument: so (for SOC) and down (for spin down calculations)
 #
-# Input files: <seedname>.castep
-#              <seedname>.bands 
+# Input files: [seedname].castep
+#              [seedname].bands 
 #
-# Output files: <seedname>.energy or <seedname>.energyso
-#               <seedname>.struct
-#               <seedname>.intrans
+# Output files: [seedname].energy or [seedname].energyso
+#               [seedname].struct
+#               [seedname].intrans
 #
 # Required packages: spglib and ase
 # If ase is missing try "sudo pip install --upgrade ase"
