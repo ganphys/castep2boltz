@@ -1,13 +1,17 @@
 #!/usr/bin/env python
 #
-# Fledgling CASTEP interface to the BOLTZTRAP program
+# Fledgling CASTEP interface to the BoltzTraP program
 #
-# usage:
-# castep2boltz <seedname> <optional arguments>
+# usage: castep2boltz <seedname> <optional arguments>
 # available argument: so (for SOC) and down (for spin down calculations)
 #
 # Input files: <seedname>.castep
 #              <seedname>.bands 
+#
+# <seedname>.castep and <seedname>.bands should be obtained via
+# DoS calculation. If a bandstructure calculation is used,
+# BoltzTraP would give an error if there is a repetition of any
+# of the k-points in the <seedname>.bands file.
 #
 # Output files: <seedname>.energy or <seedname>.energyso
 #               <seedname>.struct
@@ -33,7 +37,7 @@ try:
 except:
  has_spglib=False
 
-symmetry_tol = 0.01  # CASTEP default value is 0.01 ang
+symmetry_tol = 0.01  # CASTEP default value for symmetry tolerance is 0.01 ang
 
 
 def main(argv = None):
