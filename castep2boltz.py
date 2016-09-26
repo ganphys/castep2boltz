@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 #
-# Fledgling CASTEP interface to the BoltzTraP program
+# CASTEP interface to the BoltzTraP-v1.2.5 program
+# Written by Genadi Naydenov <gan503@york.ac.uk> University of York (2016)
 #
-# usage: castep2boltz <seedname> <optional arguments>
+# USAGE: castep2boltz.py <seedname> <optional arguments>
 # available argument: so (for SOC) and down (for spin down calculations)
 #
 # Input files: <seedname>.castep
@@ -20,8 +21,6 @@
 # Required packages: spglib and ase
 # If ase is missing try "sudo pip install --upgrade ase"
 # If spglib is missing try "sudo pip install pyspglib"
-
-
 
 import os
 import sys
@@ -57,7 +56,7 @@ def main(argv = None):
         argv = sys.argv
     if len(argv) < 2:
        # Avoid ugly errors
-       print '|| Usage: castep2boltz <seedname> <optional arguments> ||'
+       print '|| Usage: castep2boltz.py <seedname> <opt. arguments>  ||'
        print '|| optional arguments: "so" (for SOC runs) ...         ||'
        print '||          and "down" (for spin down calculations)    ||'
        print '||-----------------------------------------------------||'
@@ -73,7 +72,7 @@ def main(argv = None):
     help = ['h', '-h','--h', 'help', '-help', '--help']
     for i in help:
       if i in argv:
-            print '|| Usage: castep2boltz <seedname> <optional arguments> ||'
+            print '|| Usage: castep2boltz.py <seedname> <opt. arguments>  ||'
             print '|| optional arguments: "so" (for SOC runs) ...         ||'
             print '||          and "down" (for spin down calculations)    ||'
 	    print '|| Needed input:<seedname>.bands and <seedname>.castep ||'
@@ -525,4 +524,3 @@ def main(argv = None):
 if __name__ == "__main__":
     import sys
     sys.exit(main())
-
