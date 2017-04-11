@@ -36,7 +36,7 @@ try:
 except:
  has_spglib=False
 
-symmetry_tol = 0.01  # CASTEP default value for symmetry tolerance is 0.01 ang
+symmetry_tol = 0.001  # CASTEP default value for symmetry tolerance is 0.001 ang
 
 
 def main(argv = None):
@@ -464,7 +464,11 @@ def main(argv = None):
     f_intrans += str(efcut) + '                      # (efcut) energy range of chemical potential\n'
     f_intrans += str(tmax) + ' ' + str(deltat) + '                # Tmax, temperature grid\n'
     f_intrans += str(ecut2) + '                      # energyrange of bands given individual DOS output sig_xxx and dos_xxx (xxx is band number)\n'
-    f_intrans += 'HISTO                      #Scheme to obtain DOS. HISTO/TETRA: histogram/thetrahedron sampling\n'
+    f_intrans += 'HISTO                     # Scheme to obtain DOS. HISTO/TETRA: histogram/thetrahedron sampling\n\n'
+    f_intrans += '# Please uncomment and edit lines below if you want to use chemical (electronic) doping\n'
+    f_intrans += '#0 0 0 0 0              # tau-model. Not documented\n'
+    f_intrans += '#14      # number of fixed dopings\n'
+    f_intrans += '#1E20 5E20 1E21 2E21 3E21 5E21 1E22 5E22 -1E20 -5E20 -1E21 -2.5E21 -5E21 -1E22 # fixed doping levels in cm^3\n'
 
     f = open(intrans_file, 'w')
     f.write(f_intrans)
