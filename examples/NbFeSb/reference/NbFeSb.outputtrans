@@ -1,0 +1,58 @@
+ dos normalization:    2.00000000000000     
+ About to call read_input
+=================== INPUT VARIABLES ======================
+ Bandstyle: GENE     
+Set fermi:   0
+Debug:  0
+FermiE:  0.8059. step size: 0.0005 Ecut: 0.4000. # val. e:  144.000
+Run type: CALC
+Fourier expansion factor:  5
+Calc type: BOLTZ
+Fermi level range: (Ry)  0.1500
+Max temperature: (K)  800.0 Temp step: (K) 50.0
+Range around Ef where bands are given individual output (Ry) -1.0000
+HISTO used for calculation of DOS
+    0 doping levels will be used
+=========================================================
+ Band style: GENE     
+ Number of kpts in IBZ:         2600
+ Input file read successfully
+ NON-CENTROSYMMETRIC. ADDING i
+ About to call subroutine bandana
+==============  OUTPUT from BANDANA       ================
+Egap:     0.039237 Energy range:     0.348598 -     1.289859. Bands range:   41 -   96
+VBM:     0.780768 CBM:     0.820004 Efermi:     0.805876
+ 
+==============  End BANDANA           ====================
+ Subroutine bandana executed successfully
+ Approx number of kpts in BZ :       499200
+ About to enter gen_lattpoints
+ ======= OUTPUT FROM gen_lattpoints ======================
+  KXMAX,KYMAX,KZMAX          85          85          85
+ GMAX   947.385927340074     
+    55408 LATTICE POINTS GENERATED 
+
+        SIZE INCLUDING STAR MEMBERS =  2495389
+ USED TIME:   39.2481002807617     
+ =============== END gen_lattpoints ======================
+ Allocating engre...
+ engre allocated
+ About to enter fite4...
+fite4 matrix setup:   595.724
+ inf =            0
+ INF2:           0
+fite4 diagonalize:      1.180
+fite4 reexpand:        63.492
+ Subroutine fite4 executed
+ Finally! Starting Boltzmann calculation!
+ Calling DOS
+==============  OUTPUT from dos   ========================
+ max-exp          84          84          84
+ iff1,iff2,iff3         180         180         180
+  in dos before bracketing ebmin/max =   0.348529833326716     
+   1.29136140244052     
+  in dos ebmin/max =   0.254246676415336        1.38564455935190       deltae = 
+  5.000000000000000E-004
+  in dos icut1, icut2 =           41          96
+ Calling FermiIntegrals
+ TRANSPORT END BoltzTrap calculation

@@ -1,0 +1,583 @@
+ +-------------------------------------------------+
+ |                                                 |
+ |      CCC   AA    SSS  TTTTT  EEEEE  PPPP        |
+ |     C     A  A  S       T    E      P   P       |
+ |     C     AAAA   SS     T    EEE    PPPP        |
+ |     C     A  A     S    T    E      P           |
+ |      CCC  A  A  SSS     T    EEEEE  P           |
+ |                                                 |
+ +-------------------------------------------------+
+ |                                                 |
+ | Welcome to Academic Release CASTEP version 17.2 |          
+ | Ab Initio Total Energy Program                  |
+ |                                                 |
+ | Authors:                                        |
+ | M. Segall, M. Probert, C. Pickard, P. Hasnip,   |
+ | S. Clark, K. Refson, J. R. Yates, M. Payne      |
+ |                                                 |
+ | Contributors:                                   |
+ | P. Lindan, P. Haynes, J. White, V. Milman,      |
+ | N. Govind, M. Gibson, P. Tulip, V. Cocula,      |
+ | B. Montanari, D. Quigley, M. Glover,            |
+ | L. Bernasconi, A. Perlov, M. Plummer,           |
+ | E. McNellis, J. Meyer, J. Gale, D. Jochym       |
+ | J. Aarons, B. Walker, R. Gillen, D. Jones       |
+ | T. Green, I. J. Bush, C. J. Armstrong,          |
+ | E. J. Higgins, E. L. Brown, M. S. McFly,        |
+ | J. Wilkins, B-C. Shih, P. J. P. Byrne           |
+ |                                                 |
+ | Copyright (c) 2000 - 2017                       |
+ |                                                 |
+ |     Distributed under the terms of an           |
+ |     Agreement between the United Kingdom        |
+ |     Car-Parrinello (UKCP) Consortium,           |
+ |     Daresbury Laboratory and Accelrys, Inc.     |
+ |                                                 |
+ | Please cite                                     |
+ |                                                 |
+ |     "First principles methods using CASTEP"     |
+ |                                                 |
+ |         Zeitschrift fuer Kristallographie       |
+ |           220(5-6) pp. 567-570 (2005)           |
+ |                                                 |
+ | S. J. Clark, M. D. Segall, C. J. Pickard,       |
+ | P. J. Hasnip, M. J. Probert, K. Refson,         |
+ | M. C. Payne                                     |
+ |                                                 |
+ |       in all publications arising from          |
+ |              your use of CASTEP                 |
+ |                                                 |
+ +-------------------------------------------------+
+ 
+ 
+ Compiled for linux_x86_64_ifort14 on Sat, 18 Mar 2017 12:26:31 +0000
+ from code version 
+ 4947bf343853+ Castep172_branch Tue, 28 Feb 2017 17:24:36 +0000
+ Compiler: Intel Fortran 14.0.0.080; Optimisation: fast
+ MATHLIBS: Intel MKL(11.1.0) (LAPACK version 3.4.1)
+ FFT Lib : fftw3 version fftw-3.3.4-sse2-avx
+ Fundamental constants values: CODATA 2010
+ 
+ Run started: Mon, 20 Mar 2017 19:49:42 +0000
+Reading continuation data from model file NbFeSb.check
+ 
+ Pseudo atomic calculation performed for Fe 3d6 4s2
+ 
+ Converged in 31 iterations to a total energy of -853.8186 eV
+ 
+ 
+ Pseudo atomic calculation performed for Nb 4s2 4p6 4d4 5s1
+ 
+ Converged in 18 iterations to a total energy of -1646.3740 eV
+ 
+ 
+ Pseudo atomic calculation performed for Sb 4d10 5s2 5p3
+ 
+ Converged in 34 iterations to a total energy of -2380.4545 eV
+ 
+Initialising basis set for model.
+Reinitialising basis set for current geometry.
+Continuing from previous run with ground state wavefunction.
+Continuing from previous run with ground state density.
+ Calculation parallelised over 20 processes.
+ Data is distributed by k-point(20-way)
+
+ ************************************ Title ************************************
+ 
+
+ ***************************** General Parameters ******************************
+  
+ output verbosity                               : normal  (1)
+ continuing from                                : NbFeSb.check
+ write checkpoint data to                       : NbFeSb.check
+ type of calculation                            : Electronic Spectroscopy
+ stress calculation                             : off
+ density difference calculation                 : off
+ electron localisation func (ELF) calculation   : off
+ Hirshfeld analysis                             : off
+ unlimited duration calculation
+ timing information                             : on
+ memory usage estimate                          : on
+ write final potential to formatted file        : off
+ write final density to formatted file          : off
+ write BibTeX reference list                    : on
+ write OTFG pseudopotential files               : on
+ write electrostatic potential file             : on
+ write bands file                               : on
+ checkpoint writing                             : both castep_bin and check files
+  
+ output         length unit                     : A
+ output           mass unit                     : amu
+ output           time unit                     : ps
+ output         charge unit                     : e
+ output           spin unit                     : hbar/2
+ output         energy unit                     : eV
+ output          force unit                     : eV/A
+ output       velocity unit                     : A/ps
+ output       pressure unit                     : GPa
+ output     inv_length unit                     : 1/A
+ output      frequency unit                     : cm-1
+ output force constant unit                     : eV/A**2
+ output         volume unit                     : A**3
+ output   IR intensity unit                     : (D/A)**2/amu
+ output         dipole unit                     : D
+ output         efield unit                     : eV/A/e
+ output        entropy unit                     : J/mol/K
+  
+ wavefunctions paging                           : none
+ random number generator seed                   :  140621700
+ data distribution                              : optimal for this architecture
+ optimization strategy                          : maximize speed(+++)
+
+ *********************** Exchange-Correlation Parameters ***********************
+  
+ using functional                               : Perdew Burke Ernzerhof
+ relativistic treatment                         : Koelling-Harmon
+ DFT+D: Semi-empirical dispersion correction    : off
+
+ ************************* Pseudopotential Parameters **************************
+  
+ pseudopotential representation                 : reciprocal space
+ <beta|phi> representation                      : reciprocal space
+ spin-orbit coupling                            : off
+
+ **************************** Basis Set Parameters *****************************
+  
+ plane wave basis set cut-off                   :   700.0000   eV
+ size of standard grid                          :     2.0000
+ size of   fine   gmax                          :    27.1093   1/A
+ finite basis set correction                    : none
+
+ **************************** Electronic Parameters ****************************
+  
+ number of  electrons                           :  144.0    
+ net charge of system                           :  0.000    
+ treating system as non-spin-polarized
+ number of bands                                :         86
+
+ ********************* Electronic Minimization Parameters **********************
+  
+ Method: Treating system as metallic with density mixing treatment of electrons,
+         and number of  SD  steps               :          1
+         and number of  CG  steps               :          4
+  
+ total energy / atom convergence tol.           : 0.1000E-04   eV
+ eigen-energy convergence tolerance             : 0.1000E-05   eV
+ max force / atom convergence tol.              : ignored
+ convergence tolerance window                   :          3   cycles
+ max. number of SCF cycles                      :         80
+ number of fixed-spin iterations                :         10
+ smearing scheme                                : Gaussian
+ smearing width                                 : 0.2000       eV
+ Fermi energy convergence tolerance             : 0.2721E-13   eV
+ periodic dipole correction                     : NONE
+
+ ************************** Density Mixing Parameters **************************
+  
+ density-mixing scheme                          : Pulay
+ max. length of mixing history                  :         20
+ charge density mixing amplitude                : 0.8000    
+ cut-off energy for mixing                      :  700.0       eV
+
+ *********************** Population Analysis Parameters ************************
+  
+ Population analysis with cutoff                :  3.000       A
+ Partial DOS weights calculated
+
+ ********************* Electronic Spectroscopy Parameters **********************
+  
+ electronic spectroscopy with theory level      : DFT       
+ spectroscopy calculation                       : density of states
+ max. number of iterations                      :        120
+ max. steps per iteration                       :         10
+ number of bands / k-point                      :        133
+ band convergence tolerance                     : 0.1000E-05   eV
+ write orbitals file                            : off
+
+ *******************************************************************************
+  
+ 
+                           -------------------------------
+                                      Unit Cell
+                           -------------------------------
+        Real Lattice(A)                      Reciprocal Lattice(1/A)
+   5.9576650   0.0000000   0.0000000        1.0546389   0.0000000   0.0000000
+   0.0000000   5.9576650   0.0000000        0.0000000   1.0546389   0.0000000
+   0.0000000   0.0000000   5.9576650        0.0000000   0.0000000   1.0546389
+ 
+                       Lattice parameters(A)       Cell Angles
+                    a =    5.957665          alpha =   90.000000
+                    b =    5.957665          beta  =   90.000000
+                    c =    5.957665          gamma =   90.000000
+ 
+                       Current cell volume =  211.460005       A**3
+                                   density =    0.000000   AMU/A**3
+                                           =    0.000000     g/cm^3
+ 
+                           -------------------------------
+                                     Cell Contents
+                           -------------------------------
+                         Total number of ions in cell =   12
+                      Total number of species in cell =    3
+                        Max number of any one species =    4
+ 
+            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+            x  Element    Atom        Fractional coordinates of atoms  x
+            x            Number           u          v          w      x
+            x----------------------------------------------------------x
+            x  Fe           1         0.250000   0.250000   0.250000   x 
+            x  Fe           2         0.250000   0.750000   0.750000   x 
+            x  Fe           3         0.750000   0.250000   0.750000   x 
+            x  Fe           4         0.750000   0.750000   0.250000   x 
+            x  Nb           1         0.000000   0.000000   0.000000   x 
+            x  Nb           2         0.000000   0.500000   0.500000   x 
+            x  Nb           3         0.500000   0.000000   0.500000   x 
+            x  Nb           4         0.500000   0.500000   0.000000   x 
+            x  Sb           1         0.500000   0.500000   0.500000   x 
+            x  Sb           2         0.500000   0.000000   0.000000   x 
+            x  Sb           3         0.000000   0.500000   0.000000   x 
+            x  Sb           4         0.000000   0.000000   0.500000   x 
+            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+ 
+ 
+                         No user defined ionic velocities
+ 
+                           -------------------------------
+                                   Details of Species
+                           -------------------------------
+ 
+                               Mass of species in AMU
+                                    Fe   55.8450000
+                                    Nb   92.9063800
+                                    Sb  121.7600000
+ 
+                          Electric Quadrupole Moment (Barn)
+                                    Fe    0.1600000 Isotope 57
+                                    Nb   -0.3200000 Isotope 93
+                                    Sb   -0.5430000 Isotope121
+ 
+                          Files used for pseudopotentials:
+                                    Fe Fe_OTF.usp
+                                    Nb Nb_OTF.usp
+                                    Sb Sb_OTF.usp
+ 
+                           -------------------------------
+                              k-Points For BZ Sampling
+                           -------------------------------
+                       MP grid size for SCF calculation is  8  8  8
+                            with an offset of   0.000  0.000  0.000
+                       Number of kpoints used =            20
+ 
+                           -------------------------------
+                               Symmetry and Constraints
+                           -------------------------------
+ 
+                      Cell is a supercell containing 4 primitive cells
+                      Maximum deviation from symmetry =  0.00000         ANG
+ 
+                      Number of symmetry operations   =          96
+                      Number of ionic constraints     =           3
+                      Point group of crystal =    30: Td, -43m, -4 3 m
+                      Space group of crystal =   216: F-43m, F -4 2 3
+ 
+             Set iprint > 1 for details on symmetry rotations/translations
+ 
+                         Centre of mass is constrained
+             Set iprint > 1 for details of linear ionic constraints
+ 
+                         Number of cell constraints= 5
+                         Cell constraints are:  1 1 1 0 0 0
+ 
+                         External pressure/stress (GPa)
+                          0.00000   0.00000   0.00000
+                                    0.00000   0.00000
+                                              0.00000
+ 
++---------------- MEMORY AND SCRATCH DISK ESTIMATES PER PROCESS --------------+
+|                                                     Memory          Disk    |
+|                                               ----------------------------- |
+| Approx. total storage required per process         1029.5 MB         0.0 MB |
+|                                                                             |
+| Requirements will fluctuate during execution and may exceed these estimates |
++-----------------------------------------------------------------------------+
+ 
+  =====================================================================
+  +                                                                   +
+  +                 Calculation of Spectral Properties                +
+  +                                                                   +
+  + Calculation re-parallelised over 20 processes.                    +
+  + Data distributed by G-vector(1-way), k-point(20-way), band(1-way) +
+  + Data distributed by k-point(20-way)                               +
+  +                                                                   +
+  =====================================================================
+ 
+ Pseudo atomic calculation performed for Fe 3d6 4s2
+ 
+ Converged in 31 iterations to a total energy of -853.8186 eV
+ 
+ 
+ Pseudo atomic calculation performed for Nb 4s2 4p6 4d4 5s1
+ 
+ Converged in 18 iterations to a total energy of -1646.3740 eV
+ 
+ 
+ Pseudo atomic calculation performed for Sb 4d10 5s2 5p3
+ 
+ Converged in 34 iterations to a total energy of -2380.4545 eV
+ 
+  Starting k-point:        1 of      130 on this process      |<-- SPEC
+  Starting k-point:        2 of      130 on this process      |<-- SPEC
+  Starting k-point:        3 of      130 on this process      |<-- SPEC
+  Starting k-point:        4 of      130 on this process      |<-- SPEC
+  Starting k-point:        5 of      130 on this process      |<-- SPEC
+  Starting k-point:        6 of      130 on this process      |<-- SPEC
+  Starting k-point:        7 of      130 on this process      |<-- SPEC
+  Starting k-point:        8 of      130 on this process      |<-- SPEC
+  Starting k-point:        9 of      130 on this process      |<-- SPEC
+  Starting k-point:       10 of      130 on this process      |<-- SPEC
+  Starting k-point:       11 of      130 on this process      |<-- SPEC
+  Starting k-point:       12 of      130 on this process      |<-- SPEC
+  Starting k-point:       13 of      130 on this process      |<-- SPEC
+  Starting k-point:       14 of      130 on this process      |<-- SPEC
+  Starting k-point:       15 of      130 on this process      |<-- SPEC
+  Starting k-point:       16 of      130 on this process      |<-- SPEC
+  Starting k-point:       17 of      130 on this process      |<-- SPEC
+  Starting k-point:       18 of      130 on this process      |<-- SPEC
+  Starting k-point:       19 of      130 on this process      |<-- SPEC
+  Starting k-point:       20 of      130 on this process      |<-- SPEC
+  Starting k-point:       21 of      130 on this process      |<-- SPEC
+  Starting k-point:       22 of      130 on this process      |<-- SPEC
+  Starting k-point:       23 of      130 on this process      |<-- SPEC
+  Starting k-point:       24 of      130 on this process      |<-- SPEC
+  Starting k-point:       25 of      130 on this process      |<-- SPEC
+  Starting k-point:       26 of      130 on this process      |<-- SPEC
+  Starting k-point:       27 of      130 on this process      |<-- SPEC
+  Starting k-point:       28 of      130 on this process      |<-- SPEC
+  Starting k-point:       29 of      130 on this process      |<-- SPEC
+  Starting k-point:       30 of      130 on this process      |<-- SPEC
+  Starting k-point:       31 of      130 on this process      |<-- SPEC
+  Starting k-point:       32 of      130 on this process      |<-- SPEC
+  Starting k-point:       33 of      130 on this process      |<-- SPEC
+  Starting k-point:       34 of      130 on this process      |<-- SPEC
+  Starting k-point:       35 of      130 on this process      |<-- SPEC
+  Starting k-point:       36 of      130 on this process      |<-- SPEC
+  Starting k-point:       37 of      130 on this process      |<-- SPEC
+  Starting k-point:       38 of      130 on this process      |<-- SPEC
+  Starting k-point:       39 of      130 on this process      |<-- SPEC
+  Starting k-point:       40 of      130 on this process      |<-- SPEC
+  Starting k-point:       41 of      130 on this process      |<-- SPEC
+  Starting k-point:       42 of      130 on this process      |<-- SPEC
+  Starting k-point:       43 of      130 on this process      |<-- SPEC
+  Starting k-point:       44 of      130 on this process      |<-- SPEC
+  Starting k-point:       45 of      130 on this process      |<-- SPEC
+  Starting k-point:       46 of      130 on this process      |<-- SPEC
+  Starting k-point:       47 of      130 on this process      |<-- SPEC
+  Starting k-point:       48 of      130 on this process      |<-- SPEC
+  Starting k-point:       49 of      130 on this process      |<-- SPEC
+  Starting k-point:       50 of      130 on this process      |<-- SPEC
+  Starting k-point:       51 of      130 on this process      |<-- SPEC
+  Starting k-point:       52 of      130 on this process      |<-- SPEC
+  Starting k-point:       53 of      130 on this process      |<-- SPEC
+  Starting k-point:       54 of      130 on this process      |<-- SPEC
+  Starting k-point:       55 of      130 on this process      |<-- SPEC
+  Starting k-point:       56 of      130 on this process      |<-- SPEC
+  Starting k-point:       57 of      130 on this process      |<-- SPEC
+  Starting k-point:       58 of      130 on this process      |<-- SPEC
+  Starting k-point:       59 of      130 on this process      |<-- SPEC
+  Starting k-point:       60 of      130 on this process      |<-- SPEC
+  Starting k-point:       61 of      130 on this process      |<-- SPEC
+  Starting k-point:       62 of      130 on this process      |<-- SPEC
+  Starting k-point:       63 of      130 on this process      |<-- SPEC
+  Starting k-point:       64 of      130 on this process      |<-- SPEC
+  Starting k-point:       65 of      130 on this process      |<-- SPEC
+  Starting k-point:       66 of      130 on this process      |<-- SPEC
+  Starting k-point:       67 of      130 on this process      |<-- SPEC
+  Starting k-point:       68 of      130 on this process      |<-- SPEC
+  Starting k-point:       69 of      130 on this process      |<-- SPEC
+  Starting k-point:       70 of      130 on this process      |<-- SPEC
+  Starting k-point:       71 of      130 on this process      |<-- SPEC
+  Starting k-point:       72 of      130 on this process      |<-- SPEC
+  Starting k-point:       73 of      130 on this process      |<-- SPEC
+  Starting k-point:       74 of      130 on this process      |<-- SPEC
+  Starting k-point:       75 of      130 on this process      |<-- SPEC
+  Starting k-point:       76 of      130 on this process      |<-- SPEC
+  Starting k-point:       77 of      130 on this process      |<-- SPEC
+  Starting k-point:       78 of      130 on this process      |<-- SPEC
+  Starting k-point:       79 of      130 on this process      |<-- SPEC
+  Starting k-point:       80 of      130 on this process      |<-- SPEC
+  Starting k-point:       81 of      130 on this process      |<-- SPEC
+  Starting k-point:       82 of      130 on this process      |<-- SPEC
+  Starting k-point:       83 of      130 on this process      |<-- SPEC
+  Starting k-point:       84 of      130 on this process      |<-- SPEC
+  Starting k-point:       85 of      130 on this process      |<-- SPEC
+  Starting k-point:       86 of      130 on this process      |<-- SPEC
+  Starting k-point:       87 of      130 on this process      |<-- SPEC
+  Starting k-point:       88 of      130 on this process      |<-- SPEC
+  Starting k-point:       89 of      130 on this process      |<-- SPEC
+  Starting k-point:       90 of      130 on this process      |<-- SPEC
+  Starting k-point:       91 of      130 on this process      |<-- SPEC
+  Starting k-point:       92 of      130 on this process      |<-- SPEC
+  Starting k-point:       93 of      130 on this process      |<-- SPEC
+  Starting k-point:       94 of      130 on this process      |<-- SPEC
+  Starting k-point:       95 of      130 on this process      |<-- SPEC
+  Starting k-point:       96 of      130 on this process      |<-- SPEC
+  Starting k-point:       97 of      130 on this process      |<-- SPEC
+  Starting k-point:       98 of      130 on this process      |<-- SPEC
+  Starting k-point:       99 of      130 on this process      |<-- SPEC
+  Starting k-point:      100 of      130 on this process      |<-- SPEC
+  Starting k-point:      101 of      130 on this process      |<-- SPEC
+  Starting k-point:      102 of      130 on this process      |<-- SPEC
+  Starting k-point:      103 of      130 on this process      |<-- SPEC
+  Starting k-point:      104 of      130 on this process      |<-- SPEC
+  Starting k-point:      105 of      130 on this process      |<-- SPEC
+  Starting k-point:      106 of      130 on this process      |<-- SPEC
+  Starting k-point:      107 of      130 on this process      |<-- SPEC
+  Starting k-point:      108 of      130 on this process      |<-- SPEC
+  Starting k-point:      109 of      130 on this process      |<-- SPEC
+  Starting k-point:      110 of      130 on this process      |<-- SPEC
+  Starting k-point:      111 of      130 on this process      |<-- SPEC
+  Starting k-point:      112 of      130 on this process      |<-- SPEC
+  Starting k-point:      113 of      130 on this process      |<-- SPEC
+  Starting k-point:      114 of      130 on this process      |<-- SPEC
+  Starting k-point:      115 of      130 on this process      |<-- SPEC
+  Starting k-point:      116 of      130 on this process      |<-- SPEC
+  Starting k-point:      117 of      130 on this process      |<-- SPEC
+  Starting k-point:      118 of      130 on this process      |<-- SPEC
+  Starting k-point:      119 of      130 on this process      |<-- SPEC
+  Starting k-point:      120 of      130 on this process      |<-- SPEC
+  Starting k-point:      121 of      130 on this process      |<-- SPEC
+  Starting k-point:      122 of      130 on this process      |<-- SPEC
+  Starting k-point:      123 of      130 on this process      |<-- SPEC
+  Starting k-point:      124 of      130 on this process      |<-- SPEC
+  Starting k-point:      125 of      130 on this process      |<-- SPEC
+  Starting k-point:      126 of      130 on this process      |<-- SPEC
+  Starting k-point:      127 of      130 on this process      |<-- SPEC
+  Starting k-point:      128 of      130 on this process      |<-- SPEC
+  Starting k-point:      129 of      130 on this process      |<-- SPEC
+  Starting k-point:      130 of      130 on this process      |<-- SPEC
+  Total time to compute matrix elements          21621.95 sec |<-- SPEC
+  
+  + Calculation re-parallelised over 20 processes.                    +
+  + Data distributed by k-point(20-way)                               +
+ 
+ ************** Constrained Symmetrised Forces **************
+ *                                                          *
+ *               Cartesian components (eV/A)                *
+ * -------------------------------------------------------- *
+ *                         x            y            z      *
+ *                                                          *
+ * Fe              1      0.00000      0.00000      0.00000 *
+ * Fe              2      0.00000      0.00000     -0.00000 *
+ * Fe              3      0.00000     -0.00000      0.00000 *
+ * Fe              4      0.00000      0.00000      0.00000 *
+ * Nb              1      0.00000      0.00000      0.00000 *
+ * Nb              2      0.00000      0.00000      0.00000 *
+ * Nb              3      0.00000      0.00000      0.00000 *
+ * Nb              4      0.00000      0.00000      0.00000 *
+ * Sb              1     -0.00000      0.00000      0.00000 *
+ * Sb              2     -0.00000      0.00000      0.00000 *
+ * Sb              3      0.00000      0.00000      0.00000 *
+ * Sb              4     -0.00000      0.00000     -0.00000 *
+ *                                                          *
+ ************************************************************
+ 
+ Pseudo atomic calculation performed for Fe 3d6 4s2
+ 
+ Converged in 31 iterations to a total energy of -853.8186 eV
+ 
+ 
+ Pseudo atomic calculation performed for Nb 4s2 4p6 4d4 5s1
+ 
+ Converged in 18 iterations to a total energy of -1646.3740 eV
+ 
+ 
+ Pseudo atomic calculation performed for Sb 4d10 5s2 5p3
+ 
+ Converged in 34 iterations to a total energy of -2380.4545 eV
+ 
+Charge spilling parameter for spin component 1 = 0.25%
+ 
+     Atomic Populations (Mulliken)
+     -----------------------------
+Species          Ion     s      p      d      f     Total  Charge (e)
+=====================================================================
+  Fe              1     0.82   1.07   7.05   0.00   8.94    -0.94
+  Fe              2     0.82   1.07   7.05   0.00   8.94    -0.94
+  Fe              3     0.82   1.07   7.05   0.00   8.94    -0.94
+  Fe              4     0.82   1.07   7.05   0.00   8.94    -0.94
+  Nb              1     2.91   6.44   4.00   0.00  13.35    -0.35
+  Nb              2     2.91   6.44   4.00   0.00  13.35    -0.35
+  Nb              3     2.91   6.44   4.00   0.00  13.35    -0.35
+  Nb              4     2.91   6.44   4.00   0.00  13.35    -0.35
+  Sb              1     0.43   3.28  10.00   0.00  13.71     1.29
+  Sb              2     0.43   3.28  10.00   0.00  13.71     1.29
+  Sb              3     0.43   3.28  10.00   0.00  13.71     1.29
+  Sb              4     0.43   3.28  10.00   0.00  13.71     1.29
+=====================================================================
+ 
+                 Bond                   Population      Length (A)
+======================================================================
+              Fe 4 -- Sb 4                   0.28        2.57974
+              Fe 4 -- Sb 3                   0.28        2.57974
+              Fe 4 -- Sb 2                   0.28        2.57974
+              Fe 4 -- Sb 1                   0.28        2.57974
+              Fe 4 -- Nb 4                   0.39        2.57974
+              Fe 4 -- Nb 3                   0.39        2.57974
+              Fe 4 -- Nb 2                   0.39        2.57974
+              Fe 4 -- Nb 1                   0.39        2.57974
+              Fe 3 -- Sb 4                   0.28        2.57974
+              Fe 3 -- Sb 3                   0.28        2.57974
+              Fe 3 -- Sb 2                   0.28        2.57974
+              Fe 3 -- Sb 1                   0.28        2.57974
+              Fe 3 -- Nb 4                   0.39        2.57974
+              Fe 3 -- Nb 3                   0.39        2.57974
+              Fe 3 -- Nb 2                   0.39        2.57974
+              Fe 3 -- Nb 1                   0.39        2.57974
+              Fe 2 -- Sb 4                   0.28        2.57974
+              Fe 2 -- Sb 3                   0.28        2.57974
+              Fe 2 -- Sb 2                   0.28        2.57974
+              Fe 2 -- Sb 1                   0.28        2.57974
+              Fe 2 -- Nb 4                   0.39        2.57974
+              Fe 2 -- Nb 3                   0.39        2.57974
+              Fe 2 -- Nb 2                   0.39        2.57974
+              Fe 2 -- Nb 1                   0.39        2.57974
+              Fe 1 -- Sb 4                   0.28        2.57974
+              Fe 1 -- Sb 3                   0.28        2.57974
+              Fe 1 -- Sb 2                   0.28        2.57974
+              Fe 1 -- Sb 1                   0.28        2.57974
+              Fe 1 -- Nb 4                   0.39        2.57974
+              Fe 1 -- Nb 3                   0.39        2.57974
+              Fe 1 -- Nb 2                   0.39        2.57974
+              Fe 1 -- Nb 1                   0.39        2.57974
+              Nb 4 -- Sb 3                  -0.62        2.97883
+              Nb 4 -- Sb 2                  -0.62        2.97883
+              Nb 4 -- Sb 1                  -0.62        2.97883
+              Nb 3 -- Sb 4                  -0.62        2.97883
+              Nb 3 -- Sb 2                  -0.62        2.97883
+              Nb 3 -- Sb 1                  -0.62        2.97883
+              Nb 2 -- Sb 4                  -0.62        2.97883
+              Nb 2 -- Sb 3                  -0.62        2.97883
+              Nb 2 -- Sb 1                  -0.62        2.97883
+              Nb 1 -- Sb 4                  -0.62        2.97883
+              Nb 1 -- Sb 3                  -0.62        2.97883
+              Nb 1 -- Sb 2                  -0.62        2.97883
+======================================================================
+ 
+
+Writing analysis data to NbFeSb.castep_bin
+
+Writing model to NbFeSb.check
+ 
+ A BibTeX formatted list of references used in this run has been written to 
+ NbFeSb.bib
+ 
+Initialisation time =     24.49 s
+Calculation time    =  22292.48 s
+Finalisation time   =      1.13 s
+Total time          =  22318.11 s
+Peak Memory Use     = 1660376 kB
+  
+Overall parallel efficiency rating: Excellent (97%)                             
+  
+Data was distributed by:-
+k-point (20-way); efficiency rating: Excellent (97%)                            

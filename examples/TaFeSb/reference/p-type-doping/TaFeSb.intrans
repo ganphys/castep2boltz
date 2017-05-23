@@ -1,0 +1,13 @@
+GENE                      # Format of DOS
+0 0 0 0.0                 # iskip (not presently used) idebug setgap shiftgap
+0.609024 0.0005 0.4 200.0    # Fermilevel (Ry), energygrid, energy span around Fermilevel, number of electrons
+CALC                      # CALC (calculate expansion coeff), NOCALC read from file
+5                         # lpfac, number of latt-points per k-point
+BOLTZ                     # run mode (only BOLTZ is supported)
+0.15                      # (efcut) energy range of chemical potential
+1000.0 50.0                # Tmax, temperature grid
+-1.0                      # energyrange of bands given individual DOS output sig_xxx and dos_xxx (xxx is band number)
+HISTO                     # Scheme to obtain DOS. HISTO/TETRA: histogram/thetrahedron sampling
+0 0 0 0 0              # tau-model. Not documented
+37      # number of fixed dopings
+1E18 2E18 3E18 4E18 5E18 6E18 7E18 8E18 9E18 1E19 2E19 3E19 4E19 5E19 6E19 7E19 8E19 9E19 1E20 2E20 3E20 4E20 5E20 6E20 7E20 8E20 9E20 1E21 2E21 3E21 4E21 5E21 6E21 7E21 8E21 9E21 1E22 
