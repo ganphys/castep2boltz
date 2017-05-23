@@ -63,7 +63,7 @@ Once BoltzTraP is installed (please refer to BoltzTraP website for instructions)
 x_trans BolztTraP -f <seedname>
 ```
 
-The <seedname.intrans> file consists the parameter for the BolzTraP run. Temperature range and temperature step size can be changed from there. If the user wants to add doping levels, please uncomment and edit accordingly the last 3 lines of <seedname.intrans>. The tau model line needs to be uncommented but can be left unchanged with the zeros.
+The <seedname.intrans> file contains the parameters for the BolzTraP run and can be modified by the user. Temperature range and step size can be changed from there. If the user wants to add doping levels, please uncomment and edit accordingly the last 3 lines of <seedname.intrans>. The tau model line needs to be uncommented but can be left unchanged.
  
 ## Authors
 
