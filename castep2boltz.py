@@ -42,8 +42,8 @@ symmetry_tol = 0.001  # CASTEP default value for symmetry tolerance is 0.001 ang
 def main(argv = None):
     print '========================================================='
     print '||             CASTEP 2 BoltzTraP Interface            ||'
-    print '||                     version 1.0                     ||'
-    print '||                  22 September 2016                  ||'
+    print '||                     version 1.1                     ||'
+    print '||                     23 May 2017                     ||'
     print '||-----------------------------------------------------||'
     if not ase_atoms:
        print '|| ase library not found.                              ||'
@@ -143,8 +143,9 @@ def main(argv = None):
               n_electrons = float(line.split()[3])
               n_electrons_down = None
            elif spin_components == 2:
-              n_electrons = float(line.split()[3])
+              n_electrons_up = float(line.split()[3])
               n_electrons_down = float(line.split()[4])
+              n_electrons = n_electrons_up + n_electrons_down
 
         # Can you have different number of eigenvalues for
         # spin up and down channels? If yes, this part
@@ -450,7 +451,7 @@ def main(argv = None):
 
     if 'down' in argv or '-down' in argv:
         if spin_components == 2:
-            f_intrans += str(efermi_down) + ' ' + str(deltae) + ' ' + str(ecut) + ' ' + str(n_electrons_down) + '    # Fermilevel (Ry), energygrid, energy span around Fermilevel, number of electrons\n'
+            f_intrans += str(efermi_down) + ' ' + str(deltae) + ' ' + str(ecut) + ' ' + str(n_electrons) + '    # Fermilevel (Ry), energygrid, energy span around Fermilevel, number of electrons\n'
         else:
             # This could be regarded as an error or a typo. 
             # This part is also present in the .energy file section and should pop a warning if triggered.
@@ -464,11 +465,10 @@ def main(argv = None):
     f_intrans += str(efcut) + '                      # (efcut) energy range of chemical potential\n'
     f_intrans += str(tmax) + ' ' + str(deltat) + '                # Tmax, temperature grid\n'
     f_intrans += str(ecut2) + '                      # energyrange of bands given individual DOS output sig_xxx and dos_xxx (xxx is band number)\n'
-    f_intrans += 'HISTO                     # Scheme to obtain DOS. HISTO/TETRA: histogram/thetrahedron sampling\n\n'
-    f_intrans += '# Please uncomment and edit lines below if you want to use chemical (electronic) doping\n'
-    f_intrans += '#0 0 0 0 0              # tau-model. Not documented\n'
-    f_intrans += '#14      # number of fixed dopings\n'
-    f_intrans += '#1E20 5E20 1E21 2E21 3E21 5E21 1E22 5E22 -1E20 -5E20 -1E21 -2.5E21 -5E21 -1E22 # fixed doping levels in cm^3\n'
+    f_intrans += 'HISTO                     # Scheme to obtain DOS. HISTO/TETRA: histogram/thetrahedron sampling\n'
+    f_intrans += '#0 0 0 0 0                # tau-model. Not documented\n'
+    f_intrans += '#14                       # number of fixed dopings\n'
+    f_intrans += '#1E20 5E20 1E21 2E21 3E21 5E21 1E22 5E22 -1E20 -5E20 -1E21 -2.5E21 -5E21 -1E22 # example of fixed doping levels in cm^3\n'
 
     f = open(intrans_file, 'w')
     f.write(f_intrans)
