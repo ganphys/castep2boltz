@@ -8,7 +8,7 @@ You can find further information on BoltzTraP, including features and downloads,
 
 You can obtained the interface either as part of the CASTEP distribution, or download the most recent version from https://github.com/ganphys/castep2boltz 
 
-The current version of the interface is compatible with BoltzTraP v.1.2.5
+The current version of the interface (castep2boltz.py v.1.1) is compatible with BoltzTraP v.1.2.5
 
 ### Prerequisites
 
@@ -67,6 +67,6 @@ x_trans BolztTraP -f <seedname>
 
 The <seedname.intrans> file contains the parameters for the BolzTraP run and can be modified by the user. Temperature range and step size can be changed from there. If the user wants to add doping levels, please uncomment and edit accordingly the last 3 lines of <seedname.intrans>. The tau model line needs to be uncommented but can be left unchanged.
  
-## Authors
+## Author
 
 * **Genadi Naydenov** - (https://github.com/ganphys/castep2boltz)
