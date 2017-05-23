@@ -8,6 +8,8 @@ You can find further information on BoltzTraP, including features and downloads,
 
 You can obtained the interface either as part of the CASTEP distribution, or download the most recent version from https://github.com/ganphys/castep2boltz 
 
+The current version of the interface is compatible with BoltzTraP v.1.2.5
+
 ### Prerequisites
 
 The interface is a python script which uses python2.7 and requires the following libraries: numpy, ase and spglib  
@@ -16,7 +18,7 @@ Before running the script the user needs to obtain <seedname>.castep and <seedna
 
 ### Installing
 
-There is no need to install the script. If any of the prerequisite python libraries are missing, please try install them through the terminal.
+There is no need to install the script. If any of the prerequisite python libraries are missing, please try to install them through the terminal.
 
 numpy
 
