@@ -59,15 +59,15 @@ BoltzTraP.def
 
 ### BolztTraP notes
 
-Once BoltzTraP is installed (please refer to BoltzTraP website for instructions), it needs to be called using the x_trans script:
+Once BoltzTraP is installed (please refer to the BoltzTraP website for more instructions), it needs to be called using the x_trans script:
 
 ```
 x_trans BolztTraP -f <seedname>
 ```
 
-The <seedname.intrans> file contains the parameters for the BolzTraP run and can be modified by the user. Temperature range and step size can be changed from there. If the user wants to add doping levels, please uncomment and edit accordingly the last 3 lines of <seedname.intrans>. The tau model line needs to be uncommented but can be left unchanged.
+The <seedname>.intrans file contains the parameters for the BolzTraP run and can be modified by the user. Temperature range and step size can be controlled from there. If different doping levels need to be tested, please uncomment and edit accordingly the last 3 lines of <seedname>.intrans. The tau model line needs to be uncommented but can be left unchanged.
 
-For spin-polarised calculations, it is necessary to divide the final results by 2.
+For spin-polarised calculations, it is necessary to divide the final results by a factor of 2.
  
 ## Author
 
