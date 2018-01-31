@@ -42,8 +42,8 @@ symmetry_tol = 0.001  # CASTEP default value for symmetry tolerance is 0.001 ang
 def main(argv = None):
     print '========================================================='
     print '||             CASTEP 2 BoltzTraP Interface            ||'
-    print '||                     version 1.1                     ||'
-    print '||                     23 May 2017                     ||'
+    print '||                     version 1.2                     ||'
+    print '||                     30 Jan 2018                     ||'
     print '||-----------------------------------------------------||'
     if not ase_atoms:
        print '|| ase library not found.                              ||'
@@ -282,7 +282,8 @@ def main(argv = None):
                 cell=unit_cell_from_castep,
                 scaled_positions=positions,
                 pbc=True)
-
+    # Translational symm ops are not considered by boltztrap
+    # Add only unique rotational symm ops
     def compare_elements(element1, element2):
     	absdiff = abs(element1 - element2)
    	value = sum(sum(absdiff))
