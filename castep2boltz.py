@@ -58,7 +58,7 @@ def main(argv = None):
        # Avoid ugly errors
        print '|| Usage: castep2boltz.py <seedname> <opt. arguments>  ||'
        print '|| optional arguments: "so" (for SOC runs) ...         ||'
-       print '||          and "down" (for spin down calculations)    ||'
+       print '||          and "up/dn" (for spin polarised calc.)     ||'
        print '||-----------------------------------------------------||'
        print '|| Needed input:<seedname>.bands and <seedname>.castep ||'
        print '|| UNSUCCESSFUL! READ Usage above                      ||'
@@ -74,7 +74,7 @@ def main(argv = None):
       if i in argv:
             print '|| Usage: castep2boltz.py <seedname> <opt. arguments>  ||'
             print '|| optional arguments: "so" (for SOC runs) ...         ||'
-            print '||          and "down" (for spin down calculations)    ||'
+            print '||          and "up/dn" (for spin polarised calc.)     ||'
 	    print '|| Needed input:<seedname>.bands and <seedname>.castep ||'
             print '========================================================='
             sys.exit()
