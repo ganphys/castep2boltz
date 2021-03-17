@@ -8,13 +8,15 @@ You can find further information on BoltzTraP, including features and downloads,
 
 You can obtained the interface either as part of the CASTEP distribution, or download the most recent version from https://github.com/ganphys/castep2boltz 
 
-The current version of the interface (castep2boltz.py v.1.1) is compatible with BoltzTraP v.1.2.5
+The current version of the interface (castep2boltz.py v.1.2) is compatible with BoltzTraP v.1.2.5
 
 ### Prerequisites
 
 The interface is a python script which uses python2.7 and requires the following libraries: numpy, ase and spglib  
 
 Before running the script the user needs to obtain <seedname>.castep and <seedname>.bands files from a CASTEP DoS calculation.
+
+* UPDATE: `castep2boltz_python3.py` supports Python3
 
 ### Installing
 
